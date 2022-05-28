@@ -1,1 +1,3 @@
-## 50 Projects in 50 Days
+## 50 Projects using HTML, CSS and JavaScript
+
+https://starkbotsindustries.github.io/50-projects/

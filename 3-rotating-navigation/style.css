@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #222;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  background-color: #fafafa;
+}
+
+.show-nav {
+  transform: rotate(-25deg);
+}
+
+.container img {
+  max-width: 100%;
+}
+
+/* .author {
+  font-style: italic;
+  position: relative;
+  bottom: 15px;
+} */
+
+.icons {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icons-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.icons button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.icons button:focus {
+  outline: none;
+}
+
+.icons button#open {
+  left: 60%;
+}
+
+.icons button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.content {
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.content h1 {
+  position: relative;
+  top: 15px;
+}
+
+.author {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  line-height: 1.5;
+}
+
+nav {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 40px 0;
+  color: #fff;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+
+.show-nav + nav li {
+  transform:  translateX(0);
+}
+
+.container.show-nav .icons {
+  transform: rotate(-70deg);
+}

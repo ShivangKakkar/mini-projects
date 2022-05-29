@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.box {
+  width: 50vw;
+  border: 2px solid #e0e0e0;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.box button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.box.active {
+  background-color: #fff;
+}
+.answer {
+  margin-top: 30px;
+  display: none;
+}
+
+.box.active .answer {
+  display: block;
+}
+
+.box.active::after, .box.active::before {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2eec71;
+  font-size: 7rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.box.active::after {
+  color: #3498db;
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.box.active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box.active button {
+  background-color: #9fa4a8;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.box .fa-times i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .fa-times {
+  display: none;
+}
+
+.box.active .fa-times {
+  display: block;
+}
+
+.box.active .fa-chevron-down {
+  display: none;
+}

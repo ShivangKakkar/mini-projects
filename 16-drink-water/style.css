@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-blue: #2784E1;
+  --border-blue: #114BB5;
+  --water-blue: #57A6F7;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+  /* overflow: hidden; */
+  margin: 0;
+  background-color: var(--bg-blue);
+  color: #fff;
+}
+
+.big-glass {
+  height: 325px;
+  background-color: #fff;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--border-blue);
+  border-radius: 0 0 40px 40px;
+  color: var(--border-blue);
+  overflow: hidden;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.goal {
+  margin: 5px 0 25px 0;
+}
+
+.glass {
+  height: 100px;
+  background-color: #fff;
+  width: 60px;
+  border: 4px solid var(--border-blue);
+  margin: 10px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--water-blue);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.row {
+  display: flex;
+}
+
+.litre {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.glass.full {
+  background-color: var(--water-blue);
+  color: #fff;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--water-blue);
+  height: 0;
+  font-weight: bold;
+  font-size: 30px;
+  transition: height 0.3s ease;
+}
+
+.task {
+  font-size: 20px;
+}

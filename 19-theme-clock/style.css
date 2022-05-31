@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  transition: all 0.5s ease-in;
+}
+
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+#mode {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 80px 0 40px 0;
+}
+
+.dark #mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.clock {
+  height: 200px;
+  width: 200px;
+}
+
+.time {
+  font-size: 50px;
+  margin: 40px 0 10px 0;
+}
+
+.full-date {
+  font-size: 13px;
+  color: #AAAAAA;
+}
+
+.date {
+  background-color: #000;
+  color: #fff;
+  padding: 3px;
+  height: 100%;
+  border-radius: 50%;
+  margin-left: 3px;
+}
+
+.dark .date {
+  background-color: #fff;
+  color: #AAAAAA;
+}
+
+.needle {
+  background-color: #000;
+  width: 3px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.clock {
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+.clock-middle {
+  height: 10px;
+  width: 10px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-middle::after {
+  content: '';
+  height: 5px;
+  width: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dark .clock-middle::after {
+  background-color: #fff;
+}
+
+.dark .hour {
+  background-color: #fff;
+}
+
+.dark .minute {
+  background-color: #fff;
+}
